@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # set address, port.
 sv_addr = socket.gethostbyname(socket.gethostname())
-sv_port = 51000
+sv_port = 45001
 
 
 def split_rcvmsg(data: str) -> object:
