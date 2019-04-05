@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # set address, port.
 sv_addr = socket.gethostbyname(socket.gethostname())
-sv_port = 45001
+sv_port = 45100
 
 
 def sndmsg(address: object) -> bytes:
