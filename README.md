@@ -16,5 +16,4 @@ TCP Hole punching is under consideration...someday. It's easy to develop to use 
 
 
 # Reference
-
 [Hole punching paper](http://www.brynosaurus.com/pub/net/p2pnat/)
