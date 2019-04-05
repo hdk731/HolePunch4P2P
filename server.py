@@ -1,7 +1,6 @@
 import logging
 import socket
 
-
 # initialize
 con_clients = []
 
@@ -33,7 +32,8 @@ while True:
     # wait until client message.
     # buffer size is 1024 bytes.
     data, client = server.recvfrom(1024)
-    logger.info('connection from: {}', client)
+    # print("connection from: %s" % (client,))
+    logger.info("connection from: {} {}".format(client, data))
 
     # duplicate check
     if client not in con_clients:
@@ -46,10 +46,10 @@ while True:
 
     elif len(con_clients) == 2:
         # exchange address each other.
-        logger.info("server - send client info to: {}", con_clients[1])
         server.sendto(sndmsg(con_clients[1]), con_clients[0])
-        logger.info("server - send client info to: {}", con_clients[0])
+        logger.info("server - send client info to: {}".format(con_clients[1]))
         server.sendto(sndmsg(con_clients[0]), con_clients[1])
+        logger.info("server - send client info to: {}".format(con_clients[0]))
 
         # clear client info
         con_clients.clear()
