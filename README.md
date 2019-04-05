@@ -15,3 +15,5 @@ NATs).)
 
 Note:
 The client address changes after rebooting.
+TCP Hole punching is under consideration...someday. It's easy to develop to use 
+'Four Way Handshake'.
