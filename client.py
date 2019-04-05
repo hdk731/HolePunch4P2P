@@ -1,7 +1,6 @@
 import logging
 import socket
 
-
 # initialize
 logger = logging.getLogger()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -36,12 +35,12 @@ def sndmsg(message: str) -> bytes:
 client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 client.sendto(sndmsg(socket.gethostname()), (sv_addr, sv_port))
-logger.info('connection to: {} {}'.format(sv_addr, sv_port))
+logger.info("connection to: {} {}".format(sv_addr, sv_port))
 
 # wait until server message.
 # buffer size is 1024 bytes.
 data, server = client.recvfrom(1024)
-logger.info('connection from: {}', server)
+logger.info("connection from: {}".format(server))
 
 # split received message from server.
 cl_addr, cl_port = split_rcvmsg(data)
