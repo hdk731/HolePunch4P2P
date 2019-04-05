@@ -6,9 +6,9 @@
 There are several methods for NAT. The corresponding ones are shown below.
 Its likes to STUN(=Simple Traversal of UDP through NATs)
 
-・Full Cone NAT
-・Address-Restricted Cone NAT
-・Port Restricted Cone NAT
+1.Full Cone NAT
+2.Address-Restricted Cone NAT
+3.Port Restricted Cone NAT
 ×Symmetric NAT
 
 
